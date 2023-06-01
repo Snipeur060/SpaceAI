@@ -4,4 +4,4 @@
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://media.discordapp.net/attachments/853228421390663690/1113917087451205642/image.png?width=1885&amp;height=889" alt="project-screenshot" width="400" height="400/">
+<img src="https://media.discordapp.net/attachments/853228421390663690/1113917087451205642/image.png?width=1885&amp;height=889" alt="project-screenshot" width="800" height="800/">
