@@ -5,16 +5,6 @@ from func.langage import checklangage
 console = Console()
 langage = checklangage()
 
-def menu() -> None:
-    """
-    Affiche le menu
-    :return: None
-    """
-    console.print("Pour quitter le programme, entrez 'stop' ou 'exit'", style="bold blue")
-    console.print("Pour changer de modèle, entrez 'low' ou 'high'", style="bold blue")
-    console.print("Pour changer d'image, entrez 'non', 'nop' ou 'no'", style="bold blue")
-    console.print("Pour continuer, entrez le chemin de l'image", style="bold blue")
-
 
 while True:
     console.print(langage["askimgpath"],end="",style="bold blue")
