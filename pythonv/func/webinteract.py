@@ -12,7 +12,11 @@ def dlimageandreturndata(url):
     :return:
     """
     #on va chercher l'image
-    res = requests.get(url, stream=True)
+    try:
+        res = requests.get(url, stream=True)
+    except requests.exceptions.ConnectionError:
+        console.print("L'url n'est pas valide (ConnectionError)", style="bold red")
+        return False
     #on vérifie que l'url est valide
     if res.status_code == 200:
         #on génère un nom aléatoire pour l'image
