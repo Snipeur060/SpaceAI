@@ -4,6 +4,7 @@ fr = {
     "wrongvalue": "Veuillez entrer une valeur correcte",
     "programstop": "Arrêt du programme",
     "invalidpath": "Le chemin de l'image est invalide",
+    "urlnotvalid": "L'url n'est pas valide",
 }
 en = {
     "askimgpath": "Please enter the path of the image: ",
@@ -11,6 +12,7 @@ en = {
     "wrongvalue": "Please enter a correct value",
     "programstop": "Program stop",
     "invalidpath": "The path of the image is invalid",
+    "urlnotvalid": "The url is not valid",
 }
 
 def checklangage():
@@ -41,5 +43,18 @@ def returnlangage(langage):
     """
     if langage == "fr":
         return fr
+    else:
+        return en
+
+
+def customcheck():
+    """
+    On ouvre le fichier langage.txt et on récupère la langue
+    :return: la langue
+    """
+    with open("func/langage.txt", "r") as f:
+        langage = f.read()
+    if langage == "fr" or langage == "en":
+        return returnlangage(langage)
     else:
         return en
