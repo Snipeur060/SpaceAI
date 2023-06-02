@@ -17,7 +17,8 @@ def menu() -> None:
 
 
 while True:
-    img_path = console.input(langage["askimgpath"], style="bold blue")
+    console.print(langage["askimgpath"],end="",style="bold blue")
+    img_path = console.input()
     predict_model = 0
     while predict_model != "low" and predict_model != "high":
         predict_model = console.input(langage["modeltouse"])
