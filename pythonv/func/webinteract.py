@@ -3,8 +3,9 @@ import uuid
 import shutil
 import os
 from rich.console import Console
+from func.langage import customcheck
 console = Console()
-
+lg = customcheck()
 def dlimageandreturndata(url):
     """
     Télécharge une image et la retourne sous forme de bytes (selon le format que l'on aura annoncé)
@@ -15,7 +16,7 @@ def dlimageandreturndata(url):
     try:
         res = requests.get(url, stream=True)
     except requests.exceptions.ConnectionError:
-        console.print("L'url n'est pas valide (ConnectionError)", style="bold red")
+        console.print(lg["urlnotvalid"], style="bold red")
         return False
     #on vérifie que l'url est valide
     if res.status_code == 200:
@@ -31,7 +32,7 @@ def dlimageandreturndata(url):
         os.remove(imgname)
         return data
     else:
-        console.print("L'url n'est pas valide", style="bold red")
+        console.print(lg["urlnotvalid"], style="bold red")
         return False
 
 
@@ -45,5 +46,5 @@ def getcontentoffile(url):
     if res.status_code == 200:
         return str(res.text)
     else:
-        console.print("L'url n'est pas valide", style="bold red")
+        console.print(lg["urlnotvalid"], style="bold red")
         return False
