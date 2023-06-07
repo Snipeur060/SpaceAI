@@ -1,6 +1,11 @@
 <h1 align="center" id="title">SpaceAI</h1>
 
 <p align="center"><img src="https://raw.githubusercontent.com/Snipeur060/SpaceAI/main/.github/SpaceAI.png" alt="project-image"></p>
+ 
+[![python](https://img.shields.io/badge/PYTHON-306998?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![keras](https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
+[![TensorFlow](https://img.shields.io/badge/TensorFlow-ff7f00?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
+
 
 <h2>Project Screenshots:</h2>
 
