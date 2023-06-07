@@ -7,6 +7,20 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-ff7f00?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
 
 
+<p id="description">
+Fr :
+ Le projet consiste est une intelligence artificielle (IA) capable de reconnaître différentes fusées spatiales. L'IA est implémentée en Python, ainsi que les bibliothèques Keras et TensorFlow pour le développement du modèle d'apprentissage automatique (du moins ici l'utilisation).
+
+L'objectif principal de l'IA sera de classifier correctement les images des fusées spatiales (en clair de la reconnaître). Le modèle est entraîné à reconnaître cinq types de fusées spatiales : Ariane, Falcon, Saturn, Soyouz et Space Shuttle. Les données d'entraînement consisteront en un ensemble d'images représentant chacune de ces fusées spatiales.
+
+ 
+En : 
+The project consists of an artificial intelligence (AI) capable of recognizing different space rockets. The AI is implemented in Python, as well as the Keras and TensorFlow libraries for the development of the machine learning model (at least here the usage).
+
+The main objective of the AI will be to correctly classify the images of space rockets (in the clear of recognition). The model is trained to recognize five types of space rockets: Ariane, Falcon, Saturn, Soyuz and Space Shuttle. The training data consists of a set of images representing each of these space rockets.
+</p>
+
+
 <h2>Project Screenshots:</h2>
 
 <h3>ExSpace Project  <a href="https://github.com/IryDev">@IryDev</a> </h3>
