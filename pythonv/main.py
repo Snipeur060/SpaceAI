@@ -40,6 +40,7 @@ def analyzeimage():
             console.print(analyze, style="bold green")
 
 def menu() -> None:
+    global langage
     """
     Affiche le menu, il sert aussi de traitement des inputs pour sélectionner la partie du programme Exemple : 1 -> Analyse d'image, 2 -> Changement de langue etc ...
     :return: None (fait un print / input)
@@ -54,7 +55,7 @@ def menu() -> None:
             analyzeimage()
             menu()
         elif choice == "2":
-            resetlangage()
+            langage = resetlangage()
             menu()
         elif choice == "3":
             console.print("Very Soon...", style="bold red")
