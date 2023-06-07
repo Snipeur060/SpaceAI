@@ -18,7 +18,7 @@ fr = {
     """,
     "chooseoption": "Veuillez choisir une option: ",
     "asklangage": "Veuillez choisir une langue (fr/en): ",
-    "resetmessage": "La langue a été réinitialisée. Il faut redémarrer le programme pour que les changements soient pris en compte."
+    "resetmessage": "La langue a été réinitialisée"
 }
 en = {
     "askimgpath": "Please enter the path of the image: ",
@@ -37,7 +37,7 @@ en = {
     """,
     "chooseoption": "Please choose an option: ",
     "asklangage": "Please choose a language (fr/en): ",
-    "resetmessage": "The language has been reset. You have to restart the program for the changes to take effect."
+    "resetmessage": "The language has been reset"
 }
 console = Console()
 def checklangage():
@@ -91,5 +91,5 @@ def resetlangage():
     """
     with open("func/langage.txt", "w") as f:
         f.write("None")
-    checklangage()
     console.print(en["resetmessage"], style="bold green")
+    return checklangage()
