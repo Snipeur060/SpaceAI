@@ -1,4 +1,3 @@
-from rich.console import Console
 from func.screenstart import *
 from func.aianalyze import predict
 from func.webinteract import dlimageandreturndata
