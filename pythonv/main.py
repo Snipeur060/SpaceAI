@@ -16,7 +16,7 @@ def analyzeimage():
         predict_model = 0
         while predict_model != "low" and predict_model != "high":
             console.print(langage["modeltouse"], end="", style="bold blue")
-            predict_model = console.input(langage["modeltouse"])
+            predict_model = console.input()
             if img_path in ["stop", "exit", "non", "nop", "no"]:
                 console.print(langage["programstop"], style="bold red")
                 menu()
