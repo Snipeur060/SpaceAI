@@ -15,11 +15,11 @@ def analyzeimage():
         img_path = console.input()
         predict_model = 0
         while predict_model != "low" and predict_model != "high":
-            console.print(langage["modeltouse"], end="", style="bold blue")
-            predict_model = console.input()
             if img_path in ["stop", "exit", "non", "nop", "no"]:
                 console.print(langage["programstop"], style="bold red")
                 menu()
+            console.print(langage["modeltouse"], end="", style="bold blue")
+            predict_model = console.input()
             # si while toujours pas fini
             if predict_model != "low" and predict_model != "high":
                 console.print(langage["wrongvalue"], style="bold red")
@@ -29,7 +29,7 @@ def analyzeimage():
         else:
             try:
                 img_data = open(img_path, 'rb').read()
-            except FileNotFoundError:
+            except:
                 console.print(langage["invalidpath"], style="bold red")
                 continue
         analyze = predict(img_data, predict_model)
