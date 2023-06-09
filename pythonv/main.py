@@ -1,3 +1,5 @@
+__VERSION__ = "1.0.0"
+__AUTHOR__ = "Snipeur060"
 from func.screenstart import *
 from func.aianalyze import predict
 from func.webinteract import dlimageandreturndata
