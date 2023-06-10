@@ -10,6 +10,7 @@ from rich.console import Console
 import time
 console = Console()
 if __name__ == '__main__':
+  #On doit absolument le lancer dans le fichier main.py en dehors ça ne fonctionne pas
   console.print("Ce script ne peut pas être lancé seul. Ne tentez pas de le lancer seul", style="bold red")
   #on stop tout
   exit()
