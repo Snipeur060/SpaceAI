@@ -14,18 +14,19 @@ if __name__ == '__main__':
   console.print("Ce script ne peut pas être lancé seul. Ne tentez pas de le lancer seul", style="bold red")
   #on stop tout
   exit()
-
-
+  
 #on désactive les notations scientifique
 np.set_printoptions(suppress=True)
 
-# On charge le modèle
+# Chargement des modèles
+
 # Ce modèle est le moins évolué (il est par ailleurs le plus rapide)
 start_time = time.time()
 console.print("Chargement du modèle (6000)...", style="bold blue")
 lowmodel = load_model('../models/6k_keras_model.h5', compile=False)
 console.print("Le modèle (6k) a été chargé en " + str(round(time.time() - start_time, 2)) + " secondes", style="bold green")
-
+start_time = time.time()
+#modèle le plus gros (1 secondes de plus
 console.print("Chargement du modèle (18000)...", style="bold blue")
 highmodel = load_model('../models/18k_keras_model.h5', compile=False)
 console.print("Le modèle (18k) a été chargé en " + str(round(time.time() - start_time, 2)) + " secondes", style="bold green")
