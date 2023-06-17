@@ -17,7 +17,7 @@ fr = {
     6) Vider la console
     """,
     "chooseoption": "Veuillez choisir une option: ",
-    "asklangage": "Veuillez choisir une langue (fr/en): ",
+    "asklangage": "Veuillez choisir une langue (fr/en/ru): ",
     "resetmessage": "La langue a été réinitialisée"
 }
 en = {
@@ -36,9 +36,31 @@ en = {
     6) Clear console
     """,
     "chooseoption": "Please choose an option: ",
-    "asklangage": "Please choose a language (fr/en): ",
+    "asklangage": "Please choose a language (fr/en/ru): ",
     "resetmessage": "The language has been reset"
 }
+
+
+ru = {
+    "askimgpath": "Пожалуйста, введите путь к изображению:",
+    "modeltouse": "Используемая модель (low/high):",
+    "wrongvalue": "Пожалуйста, введите правильное значение",
+    "programstop": "Остановка программы",
+    "invalidpath": "Путь к изображению недействителен.",
+    "urlnotvalid": "URL-адрес недействителен",
+    "menu": """ 
+    1) Анализатор изображений
+    2) Изменить язык
+    3) Проверить наличие обновлений
+    4) Просмотр кредитов
+    5) Сдаться
+    6) Очистить консоль
+    """,
+    "chooseoption": "Пожалуйста, выберите опцию:",
+    "asklangage": "Пожалуйста, выберите язык (fr/en/ru): ",
+    "resetmessage": "Язык был сброшен"
+}
+
 console = Console()
 def checklangage():
     """
@@ -47,12 +69,12 @@ def checklangage():
     """
     with open("func/langage.txt", "r") as f:
         langage = f.read()
-    if langage == "fr" or langage == "en":
+    if langage == "fr" or langage == "en" or langage == "ru":
         return returnlangage(langage)
     else:
         while True:
             langage = input(en["asklangage"])
-            if langage == "fr" or langage == "en":
+            if langage == "fr" or langage == "en" or langage == "ru":
                 break
         with open("func/langage.txt", "w") as f:
             f.write(langage)
@@ -68,6 +90,8 @@ def returnlangage(langage):
     """
     if langage == "fr":
         return fr
+    elif langage == "ru":
+        return ru
     else:
         return en
 
@@ -79,7 +103,7 @@ def customcheck():
     """
     with open("func/langage.txt", "r") as f:
         langage = f.read()
-    if langage == "fr" or langage == "en":
+    if langage == "fr" or langage == "en" or langage == "ru":
         return returnlangage(langage)
     else:
         return en
