@@ -6,6 +6,17 @@
 [![keras](https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-ff7f00?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
 
+<h2>🚀 Supported Rocket:</h2>
+
+| Name                              |
+|-----------------------------------|
+| Soyouz (Союз космический корабль) |
+| Ariane                            |
+| Falcon 9 and Heavy                |
+| Saturn V                          |
+| Space Shuttle                     |
+
+
 
 ### Fr :
 
