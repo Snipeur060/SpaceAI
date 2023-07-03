@@ -1,11 +1,19 @@
 __VERSION__ = "1.0.0"
 __AUTHOR__ = "Snipeur060"
+
+# IMPORT
+
 from func.screenstart import *
 from func.aianalyze import predict
 from func.webinteract import dlimageandreturndata
 from func.langage import checklangage,resetlangage
+
+# INIT
+
 console = Console()
 langage = checklangage()
+
+# MAIN
 
 def analyzeimage():
     """
