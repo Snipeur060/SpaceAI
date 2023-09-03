@@ -30,10 +30,17 @@ L'objectif principal de l'IA sera de classifier correctement les images des fus�
 The project consists of an artificial intelligence (AI) capable of recognizing different space rockets. The AI is implemented in Python, as well as the Keras and TensorFlow libraries for the development of the machine learning model (at least here the usage).
 
 The main objective of the AI will be to correctly classify the images of space rockets (in the clear of recognition). The model is trained to recognize five types of space rockets: Ariane, Falcon, Saturn, Soyuz and Space Shuttle. The training data consists of a set of images representing each of these space rockets.
+
+
+### Ru :
+
+Проект состоит из искусственного интеллекта (ИИ), способного распознавать различные космические ракеты. ИИ реализован на Python, а также библиотеках Keras и TensorFlow для разработки модели машинного обучения (по крайней мере здесь использование).
+
+Основной задачей ИИ станет правильная классификация изображений космических ракет (иными словами, их распознавание). Модель обучена распознавать пять типов космических ракет: «Ариан», «Фалькон», «Сатурн», «Союз» и «Спейс Шаттл». Данные обучения будут состоять из набора изображений, представляющих каждую из этих космических ракет.
 </p>
 
 
-<h2>Project Screenshots:</h2>
+<h2>Project Screenshots / Скриншоты проекта: :</h2>
 
 <h3>ExSpace Project  <a href="https://github.com/IryDev">@IryDev</a> </h3>
 
