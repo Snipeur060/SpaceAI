@@ -51,3 +51,9 @@ The main objective of the AI will be to correctly classify the images of space r
 <h4>En version :</h4>
 
 <img src="https://media.discordapp.net/attachments/853228421390663690/1114299360272977951/image.png?width=1920&height=835" alt="project-screenshot">
+
+
+<h4>Pусская версия :</h4>
+
+<img src="https://media.discordapp.net/attachments/853228421390663690/1147983480416895066/image.png?width=1719&height=873" alt="project-screenshot">
+
