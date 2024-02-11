@@ -5,6 +5,7 @@
 [![python](https://img.shields.io/badge/PYTHON-306998?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
 [![keras](https://img.shields.io/badge/Keras-FF0000?style=for-the-badge&logo=keras&logoColor=white)](https://keras.io/)
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-ff7f00?style=for-the-badge&logo=TensorFlow&logoColor=white)](https://www.tensorflow.org/)
+[![TensorFlowJS](https://img.shields.io/badge/TensorFlowJS-ff7f00?style=for-the-badge&logo=TFJS&logoColor=white)](https://github.com/tensorflow/tfjs)
 
 <h2>🚀 Supported Rocket:</h2>
 
