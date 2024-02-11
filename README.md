@@ -52,7 +52,7 @@ The main objective of the AI will be to correctly classify the images of space r
 
 <h3>In this project <a href="https://github.com/Snipeur060">@Snipeur060</a></h3>
 
-<h4>Python CLI Version:</h4>
+<h4>Python CLI Version (Fr/En/Ru) :</h4>
 
 <img src="https://media.discordapp.net/attachments/853228421390663690/1114299104793731103/image.png?width=1773&height=889" alt="project-screenshot">
 
