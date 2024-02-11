@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import os
 import uuid
+import time
 def download_google_images(query, num_images,where):
     url = f"https://www.google.com/search?q={query}&source=lnms&hl=en&tbm=isch&asearch=ichunk&async=_id:rg_s,_pms:s,_fmt:pc&sourceid=chrome&ie=UTF-8"
 
@@ -14,8 +15,8 @@ def download_google_images(query, num_images,where):
     soup = BeautifulSoup(response.text, 'html.parser')
 
     # Créer un dossier pour sauvegarder les images
-    if not os.path.exists(query):
-        os.makedirs(query)
+    if not os.path.exists(where):
+        os.makedirs(where)
     print(soup)
     #on save en local
     with open('test.html', 'w') as f:
@@ -33,15 +34,18 @@ def download_google_images(query, num_images,where):
 
         print(image_url)
 
-
-        image_data = requests.get(image_url).content
-        name_file = str(uuid.uuid4())
-        with open(f"{where}/image_{name_file}.jpg", 'wb') as f:
-            f.write(image_data)
-            print(f"Image {i+1} téléchargée avec succès")
+        try:
+            image_data = requests.get(image_url).content
+            time.sleep(1)
+            uudd = str(uuid.uuid4())
+            with open(f"{where}/image_{uudd}.jpg", 'wb') as f:
+                f.write(image_data)
+                print(f"Image {uudd} téléchargée avec succès")
+        except Exception as e:
+            print(f"Impossible de télécharger l'image {i+1} : {e}")
 
 # Exemple d'utilisation
 search_query = input("Entrez votre recherche : ")
 num_images_to_download = int(input("Combien d'images voulez-vous télécharger ? "))
-where = input("Ou voulez vous les télécharger ?")
+where = input("Ou voulez vous les télécharger ? ")
 download_google_images(search_query, num_images_to_download,where)
