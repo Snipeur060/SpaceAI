@@ -1,4 +1,5 @@
 import requests
+from PIL.Image import Image
 from bs4 import BeautifulSoup
 import os
 import uuid
@@ -33,12 +34,14 @@ def download_google_images(query, num_images,where):
         image_url = image_url.split("&")[0]
 
         print(image_url)
+        #get image extension
+        image_extension = image_url.split(".")[-1]
+        print(image_extension)
 
         try:
             image_data = requests.get(image_url).content
-            time.sleep(1)
             uudd = str(uuid.uuid4())
-            with open(f"{where}/image_{uudd}.jpg", 'wb') as f:
+            with open(f"{where}/image_{uudd}.{image_extension}", 'wb') as f:
                 f.write(image_data)
                 print(f"Image {uudd} téléchargée avec succès")
         except Exception as e:
@@ -49,3 +52,5 @@ search_query = input("Entrez votre recherche : ")
 num_images_to_download = int(input("Combien d'images voulez-vous télécharger ? "))
 where = input("Ou voulez vous les télécharger ? ")
 download_google_images(search_query, num_images_to_download,where)
+
+
