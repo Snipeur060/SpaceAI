@@ -2,6 +2,8 @@ import shutil
 import uuid
 from tkinter import *
 from tkinter import messagebox, filedialog,simpledialog
+from tkinter.ttk import *
+
 import cv2
 import os
 import requests
@@ -140,30 +142,42 @@ def recog(data,predict_model):
             img_data = open(img_path, 'rb').read()
         except:
             pass
-        analyze = predict(img_data, predict_model)
-        if "Erreur" in analyze:
-            print(analyze)
-        else:
-            print(analyze)
+
+    analyze = predict(img_data, predict_model)
+    if "Erreur" in analyze:
+        print(analyze)
+    else:
+        print(analyze)
 
 
 
 def launchrecognition():
+    global file,link,predict_model
     if (file is not None and file != "") or link is not None:
         print("Recognition launched")
         if file is not None and file != "":
             print("File: ", file)
-            recog(file,"low")
+            recog(file,predict_model.get())
         if link is not None:
             print("Link: ", link)
-            recog(link,"low")
+            recog(link,predict_model.get())
 
     else:
         messagebox.showerror("Error", "You must choose a file or enter a link")
 
+#select model in combobox with read only
+predict_model = Combobox(root, state="readonly")
+predict_model['values'] = ("low", "high")
+predict_model.current(0)
+predict_model.grid(row=1, column=2)
+
+
+
+
 #on fait un boutton pour lancer le programme
 launch_button = Button(root, text="Launch", command=launchrecognition)
-launch_button.grid(row=1, column=2)
+launch_button.grid(row=1, column=3)
+
 
 
 # Run the application
