@@ -20,9 +20,11 @@ def download_google_images(query, num_images,where):
         os.makedirs(where)
     print(soup)
     #on save en local
-    with open('test.html', 'w') as f:
-        f.write(str(soup))
-
+    try:
+        with open('test.html', 'w') as f:
+            f.write(str(soup))
+    except Exception as e:
+        print(e)
     # Télécharger les images
     image_tags = soup.find_all('a', class_='rg_l')
     print(image_tags)
